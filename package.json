@@ -1,0 +1,24 @@
+{
+  "name": "SoundCloud",
+  "version": "1.0.0",
+  "description": "A SoundCloud wrapper with Discord Rich Presence",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "build"
+  },
+  "build": {
+    "win": {
+      "target": "nsis",
+      "icon": "./logo.ico"
+    }
+  },
+  "dependencies": {
+    "discord-rpc": "^3.0.0-beta.9",
+    "electron-widevinecdm": "^5.0.2"
+  },
+  "devDependencies": {
+    "electron": "^1.8.2-beta.5",
+    "electron-builder": "^19.55.3"
+  }
+}
