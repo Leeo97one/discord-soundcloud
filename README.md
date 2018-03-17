@@ -1,6 +1,6 @@
 # DiscordSoundCloud
 
-STAND-ALONE EXECUTABLE FOR NON-DEVS
+STAND-ALONE EXECUTABLE FOR NON-DEVS - 
 https://drive.google.com/open?id=1cPCp5a9A2-YMs7w7P5K3djtAqH7ePnTM
 INTRUCTIONS - Unzip and open soundcloud.exe inside the app_files folder (the shortcut outside app_files may not work)
 
