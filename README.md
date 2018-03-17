@@ -4,7 +4,7 @@ STAND-ALONE EXECUTABLE FOR NON-DEVS -
 https://drive.google.com/open?id=1cPCp5a9A2-YMs7w7P5K3djtAqH7ePnTM
 INTRUCTIONS - Unzip and open soundcloud.exe inside the app_files folder (the shortcut outside app_files may not work)
 
-SETUP FOR DEVS - clone and navigate to the directory in CMD and run 
+SETUP FOR DEVS - Clone and navigate to the directory in CMD and run 
 ```npm install```
 then
 ```npm start``` (Node.js required)
@@ -15,4 +15,4 @@ PREVIEW
 PLANNED FEATURES
 - Song art support - As it stands now, there is no possible way to achieve this with what's been offered to developers
 - Song progress bar - I got one of my high-IQ boys back home working on this feature as we speak
-- Listen with friends - Again this is currently not possible, although there is still hope for the future
+- Listen with friends - Again, this is currently not possible, although there is still hope for the future
