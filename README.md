@@ -3,6 +3,7 @@
 STAND-ALONE EXECUTABLE FOR NON-DEVS - 
 https://drive.google.com/open?id=1cPCp5a9A2-YMs7w7P5K3djtAqH7ePnTM
 INTRUCTIONS - Unzip and open soundcloud.exe inside the app_files folder (the shortcut outside app_files may not work)
+NOTE - Currently, the app refreshes your status every 10-15 seconds, which means when you switch songs it may not change instantly. This is not a bug, **__this is a feature__**
 
 SETUP FOR DEVS - Clone and navigate to the directory in CMD and run 
 ```npm install```
