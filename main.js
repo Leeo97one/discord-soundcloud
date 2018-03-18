@@ -1,7 +1,8 @@
-const {BrowserWindow, app} = require('electron');
+const {BrowserWindow, app, Menu} = require('electron');
 const {Client} = require('discord-rpc');
 const widevine = require('electron-widevinecdm');
 const rpc      = new Client({transport: 'ipc'});
+
 
 widevine.load(app);
 
@@ -12,7 +13,7 @@ let appID = '423329180227338240',
     WindowSettings = {
         backgroundColor: '#FFF',
         useContentSize: false,
-        autoHideMenuBar: true,
+       // autoHideMenuBar: false,
         resizable: true,
         center: true,
         frame: true,
@@ -30,7 +31,6 @@ let appID = '423329180227338240',
         rpc.login(appID).catch(e => setTimeout(() => login(tries), 10E3));
     },
     getInfos = `(function() {
-        
         
         if(document.querySelector('.playControl').getAttribute('title') == "Pause current") {
             return {
@@ -53,18 +53,17 @@ async function checkSoundCloud() {
     let infos = await mainWindow.webContents.executeJavaScript(getInfos);
     
     
-
     if (infos) { // if !infos don't change presence then.
-        let {songName, author, avatar, progress} = infos;
+        let {songName, author, image, progress} = infos;
         
-        if (avatar) smallImageKey = avatar;
+        if (image) smallImageKey = image;
         
         rpc.setActivity({
             details: songName,
             state: author
             ? `by ${author}` 
             : author,
-            largeImageKey: 'soundcloud',
+            largeImageKey:'soundcloud',
             smallImageKey,
             instance: false,
         });
@@ -75,13 +74,17 @@ rpc.on('ready', () => {
     checkSoundCloud();
     setInterval(() => {
         checkSoundCloud();
-    }, 15E3);
+    }, 5E3);
 });
 
 app.on('ready', () => {
     mainWindow = new BrowserWindow(WindowSettings);
     mainWindow.maximize();
     mainWindow.loadURL("http://www.soundcloud.com/");
+    // build menu from template
+    const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
+    // insert menu
+    Menu.setApplicationMenu(mainMenu);
     login();
 });
 
@@ -90,3 +93,58 @@ app.on('before-quit', () => {
     mainWindow.removeAllListeners('close');
     mainWindow.close();
 });
+
+// create menu template
+const mainMenuTemplate = [
+    {
+        label: 'Navigation',
+        submenu: [
+            {
+                label: 'Go Back',
+                accelerator: process.platform == 'darwin' ? 'Command+Left' : 'Ctrl+Left',
+                click(){
+                    pageGoBack();
+                }
+            },
+            {
+                label: 'Go Foward',
+                accelerator: process.platform == 'darwin' ? 'Command+Right' : 'Ctrl+Right',
+                click(){
+                    pageGoForward();
+                }
+            },
+            {
+                label: 'Refresh',
+                accelerator: process.platform == 'darwin' ? 'Command+R' : 'Ctrl+R',
+                click(){
+                    pageRefresh();
+                }
+            },
+            {
+                label: 'Quit',
+                accelerator: process.platform == 'darwin' ? 'Command+Q' : 'Ctrl+Q',
+                click(){
+                    app.quit();
+                }
+            }
+        ]
+    }
+];
+
+// handle window back
+function pageGoBack() {
+    contents = mainWindow.webContents;
+    contents.goBack();
+}
+
+// handle window foward
+function pageGoForward() {
+    contents = mainWindow.webContents;
+    contents.goForward();
+}
+
+// handle window foward
+function pageRefresh() {
+    contents = mainWindow.webContents;
+    contents.reload();
+}
