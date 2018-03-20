@@ -15,8 +15,7 @@ then
 **PREVIEW**                                            
 ![alt text](https://i.imgur.com/ISYXzh0.png)
 
-**DISCORD**
-Join my discord for updates and memes https://discord.gg/ByyEBV
+**DISCORD -** Join my discord for updates and memes https://discord.gg/ByyEBV
 
 **PLANNED FEATURES**
 - Song art support - As it stands now, there is no possible way to achieve this with what's been offered to developers
