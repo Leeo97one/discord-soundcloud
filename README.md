@@ -15,6 +15,9 @@ then
 **PREVIEW**                                            
 ![alt text](https://i.imgur.com/ISYXzh0.png)
 
+**DISCORD**
+Join my discord for updates and memes https://discord.gg/ByyEBV
+
 **PLANNED FEATURES**
 - Song art support - As it stands now, there is no possible way to achieve this with what's been offered to developers
 - Song progress bar - I got one of my high-IQ boys back home working on this feature as we speak
