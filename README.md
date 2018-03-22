@@ -1,7 +1,7 @@
 # DiscordSoundCloud
 
 **STAND-ALONE EXECUTABLE FOR NON-DEVS -** 
-https://drive.google.com/open?id=1cPCp5a9A2-YMs7w7P5K3djtAqH7ePnTM
+https://drive.google.com/open?id=1cPCp5a9A2-YMs7w7P5K3djtAqH7ePnTM *(59mb)*
 
 **INSTRUCTIONS -** Unzip and open SoundCloud.exe inside the SoundCloud folder _(It's located near the bottom)_
 
