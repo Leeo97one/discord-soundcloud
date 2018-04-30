@@ -3,7 +3,12 @@
 **STAND-ALONE EXECUTABLE FOR NON-DEVS -** 
 https://drive.google.com/open?id=1cPCp5a9A2-YMs7w7P5K3djtAqH7ePnTM *(~59mb)*
 
-**INSTRUCTIONS -** Unzip and open SoundCloud.exe inside the SoundCloud folder _(It's located near the bottom)_
+**INSTRUCTIONS -** Unzip and open SoundCloud.exe inside the SoundCloud folder _(It's located near the bottom)_                 
+
+_The icon is different but once you open it, the SoundCloud logo will appear in your taskbar_
+![alt text](https://i.imgur.com/Fa03Ee9.png)
+
+
 
 **NOTE -** Currently, the app refreshes your status every 10-15 seconds, which means when you switch songs it may not change instantly. This is not a bug, **_this is a feature_**
 
