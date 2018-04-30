@@ -21,10 +21,12 @@ then
 ```npm start``` _(node.js required)_
  
 **PREVIEW**                                            
-![alt text](https://i.imgur.com/ISYXzh0.png)
+![alt text](https://i.imgur.com/ISYXzh0.png)                                            
+_Feel free to add me if you have any questions_
 
 **PLANNED FEATURES**
 - Song art support - As it stands now, there is no possible way to achieve this with what's been offered to developers
 - Song progress bar - I got one of my high-IQ boys back home working on this feature as we speak
 - Listen with friends - Again, this is currently not possible, although there is still hope for the future
 - Song permalink - Either have the image or song name an actual link to the song
+- Change "Playing" to "Listening to"
