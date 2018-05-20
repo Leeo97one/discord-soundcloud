@@ -8,7 +8,7 @@ https://drive.google.com/open?id=1cPCp5a9A2-YMs7w7P5K3djtAqH7ePnTM *(~59mb)*
 _The icon is different but once you open it, the SoundCloud logo will appear in your taskbar_
 ![alt text](https://i.imgur.com/Fa03Ee9.png)
 
-**MAC INSTRUCTIONS -** Currently, there is no executable that is compatible with Mac. Although if you're tech savvy, you can clone the repository and run it using the instructions provided below for devs :)  
+**MAC INSTRUCTIONS -** Currently, there is no executable that is compatible with Mac. Although if you're tech savvy, you can clone the repository and run it using the instructions provided below for devs, just make sure you run Terminal instead of CMD :)  
 
 
 
