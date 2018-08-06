@@ -1,6 +1,6 @@
 # Discord Rich-Presence for SoundCloud
 
-**[STAND-ALONE INSTALLER](https://github.com/riverrrrrr/discord-soundcloud/releases)** *(~59mb)*                                     
+**[STAND-ALONE INSTALLER](https://github.com/riverrrrrr/discord-soundcloud/releases)** *(~42mb)*                                     
 *Just run the installer and it will add a shortcut to your desktop. It will install to AppData/Local/Programs*
 
 **NOTE -** 
