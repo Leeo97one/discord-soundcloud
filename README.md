@@ -1,4 +1,4 @@
-# DiscordSoundCloud
+# Discord Rich Presence for SoundCloud
 
 **STAND-ALONE EXECUTABLE FOR NON-DEVS -** 
 https://drive.google.com/open?id=1cPCp5a9A2-YMs7w7P5K3djtAqH7ePnTM *(~59mb)*
