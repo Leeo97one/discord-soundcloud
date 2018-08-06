@@ -1,6 +1,6 @@
 {
-  "name": "soundcloud",
-  "version": "1.0.0",
+  "name": "SoundCloud",
+  "version": "2.1.0",
   "description": "A SoundCloud wrapper with Discord Rich Presence",
   "main": "main.js",
   "scripts": {
