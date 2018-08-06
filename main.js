@@ -19,7 +19,7 @@ let appID = '423329180227338240',
         frame: true,
         alwaysOnTop: false,
         title: 'SoundCloud',
-        icon: __dirname + '/logo.ico',
+        icon: __dirname + '/build/logo.ico',
         webPreferences: {
             nodeIntegration: false,
             plugins: true,

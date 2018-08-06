@@ -5,13 +5,11 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "dist": "build"
+    "pack": "build --dir"
   },
   "build": {
-    "win": {
-      "target": "nsis",
-      "icon": "./logo.ico"
-    }
+      "appId": "discord-soundcloud-rpc",
+      "productName": "Discord Soundcloud RPC"
   },
   "dependencies": {
     "discord-rpc": "^3.0.0-beta.9",
