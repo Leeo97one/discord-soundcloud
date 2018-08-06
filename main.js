@@ -45,7 +45,10 @@ let appID = '423329180227338240',
         }
 
     })()`;
- 
+
+var startTimestamp = undefined;
+var tempSong = undefined; 
+
 async function checkSoundCloud() {
 
     if (!rpc || !mainWindow) return;
@@ -54,17 +57,29 @@ async function checkSoundCloud() {
     
     
     if (infos) { // if !infos don't change presence then.
-        let {songName, author, image, progress} = infos;
+        let {songName, author} = infos;
         
-        if (image) smallImageKey = image;
+        if (songName == "Currently browsing") {
+            startTimestamp = undefined;
+        }
+        
+        if (tempSong != songName) {
+            tempSong = songName;
+            startTimestamp = new Date();
+        }
+
+       
         
         rpc.setActivity({
             details: songName,
             state: author
             ? `by ${author}` 
             : author,
+            startTimestamp: author
+            ? startTimestamp 
+            : undefined,
             largeImageKey:'soundcloud',
-            smallImageKey,
+            largeImageText: songName,
             instance: false,
         });
     }
@@ -76,6 +91,13 @@ rpc.on('ready', () => {
         checkSoundCloud();
     }, 5E3);
 });
+
+
+
+
+
+
+
 
 app.on('ready', () => {
     mainWindow = new BrowserWindow(WindowSettings);
