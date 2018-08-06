@@ -16,7 +16,7 @@ then
 **MAC INSTRUCTIONS -** Currently, there is no executable that is compatible with Mac. Although if you're tech savvy, you can clone the repository and run it using the instructions provided below for devs, just make sure you run Terminal instead of CMD :) 
  
 **PREVIEW**                                            
-![alt text](https://i.imgur.com/R1G61EN.png)                                            
+![alt text](https://i.imgur.com/BQSEBIs.png)                                            
 _Feel free to add me if you have any questions_
 
 **PLANNED FEATURES**
