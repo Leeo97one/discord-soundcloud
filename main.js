@@ -36,6 +36,8 @@ let appID = '423329180227338240',
             return {
                 songName    : document.querySelector('.playbackSoundBadge__titleLink').getAttribute('title'),
                 author   : document.querySelector('.playbackSoundBadge__lightLink').getAttribute('title'),
+                length: document.querySelector('.playbackTimeline__duration').childNodes[1].innerHTML,
+                timePassed: document.querySelector('.playbackTimeline__timePassed').childNodes[1].innerHTML,
             }
         }
         else {
@@ -47,7 +49,25 @@ let appID = '423329180227338240',
     })()`;
 
 var startTimestamp = undefined;
+var endTimestamp = undefined;
 var tempSong = undefined; 
+
+
+function addTime(date, minutes, seconds, minutesPassed, secondsPassed) {
+    return new Date(date.getTime() + (minutes*60000 + seconds*1000) - (minutesPassed*60000 + secondsPassed*1000));
+}
+
+function addSeconds(date, seconds) {
+    return new Date(date.getTime() + seconds*1000);
+}
+
+function getMinutes(str) {
+    return Number(str.split(":")[0]);
+}
+
+function getSeconds(str) {
+    return Number(str.split(":")[1]);
+}
 
 async function checkSoundCloud() {
 
@@ -57,15 +77,18 @@ async function checkSoundCloud() {
     
     
     if (infos) { // if !infos don't change presence then.
-        let {songName, author} = infos;
+        let {songName, author, length, timePassed} = infos;
         
         if (songName == "Currently browsing") {
             startTimestamp = undefined;
+            endTimestamp = undefined;
         }
         
         if (tempSong != songName) {
             tempSong = songName;
+            //console.log(getMinutes(length), " ", getSeconds(length));
             startTimestamp = new Date();
+            endTimestamp = addTime(startTimestamp, getMinutes(length), getSeconds(length), getMinutes(timePassed), getSeconds(timePassed));
         }
 
        
@@ -77,6 +100,9 @@ async function checkSoundCloud() {
             : author,
             startTimestamp: author
             ? startTimestamp 
+            : undefined,
+            endTimestamp: author
+            ? endTimestamp
             : undefined,
             largeImageKey:'soundcloud',
             largeImageText: songName,

@@ -1,5 +1,5 @@
 {
-  "name": "SoundCloud",
+  "name": "soundcloud",
   "version": "1.0.0",
   "description": "A SoundCloud wrapper with Discord Rich Presence",
   "main": "main.js",
@@ -8,8 +8,8 @@
     "pack": "build --dir"
   },
   "build": {
-      "appId": "discord-soundcloud-rpc",
-      "productName": "Discord Soundcloud RPC"
+    "appId": "discord-soundcloud-rpc",
+    "productName": "SoundCloud"
   },
   "dependencies": {
     "discord-rpc": "^3.0.0-beta.9",
