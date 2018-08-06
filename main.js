@@ -51,7 +51,7 @@ let appID = '423329180227338240',
 var startTimestamp = undefined;
 var endTimestamp = undefined;
 var tempSong = undefined; 
-
+var tempTimePassed = undefined;
 
 function addTime(date, minutes, seconds, minutesPassed, secondsPassed) {
     return new Date(date.getTime() + (minutes*60000 + seconds*1000) - (minutesPassed*60000 + secondsPassed*1000));
@@ -83,15 +83,21 @@ async function checkSoundCloud() {
             startTimestamp = undefined;
             endTimestamp = undefined;
         }
+
+        
         
         if (tempSong != songName) {
             tempSong = songName;
             //console.log(getMinutes(length), " ", getSeconds(length));
             startTimestamp = new Date();
+            tempTimePassed = timePassed;
             endTimestamp = addTime(startTimestamp, getMinutes(length), getSeconds(length), getMinutes(timePassed), getSeconds(timePassed));
         }
 
-       
+        if (tempTimePassed != timePassed) {
+            tempTimePassed = timePassed;
+            endTimestamp = addTime(startTimestamp, getMinutes(length), getSeconds(length), getMinutes(timePassed), getSeconds(timePassed));
+        }
         
         rpc.setActivity({
             details: songName,
