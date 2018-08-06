@@ -3,7 +3,9 @@
 **[STAND-ALONE INSTALLER](https://github.com/riverrrrrr/discord-soundcloud/releases)** *(~59mb)*                                     
 *Just run the installer and it will add a shortcut to your desktop. It will install to AppData/Local/Programs*
 
-**NOTE -** Currently, the app refreshes your status every 10-15 seconds, which means when you switch songs it may not change instantly. This is not a bug, **_this is a feature_**
+**NOTE -** 
+- If you get an ad, you'll have to pause and unpause after so the time left can update from 30 seconds
+- Currently, the app refreshes your status every 10-15 seconds, which means when you switch songs it may not change instantly. This is not a bug, **_this is a feature_**
 
 **KNOWN BUGS**
 - Not having your SoundCloud language set to English will cause the application to keep your status stuck on "Currently Browsing"
