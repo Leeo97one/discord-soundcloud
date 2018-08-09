@@ -1,9 +1,10 @@
 # Discord Rich-Presence for SoundCloud
 
 **[STAND-ALONE INSTALLER](https://github.com/riverrrrrr/discord-soundcloud/releases)** *(~42mb)*                                     
-*Just run the installer and it will add a shortcut to your desktop. It will install to AppData/Local/Programs*
+*Just run the installer and it will add a shortcut to your desktop. It will install to AppData/Local/Programs*              
 
 **NOTE -** 
+- This is not an extension, it is a seperate browser for SoundCloud. Check preview below.
 - Currently, the app refreshes your status every 10-15 seconds, which means when you switch songs it may not change instantly. This is not a bug, **_this is a feature_**
 
 **KNOWN BUGS**
@@ -19,6 +20,10 @@ then
 **PREVIEW**                                            
 ![alt text](https://i.imgur.com/BQSEBIs.png)                                            
 _Feel free to add me if you have any questions_
+
+This app was made with Electron so it will launch as it's own window seperate from the browser 
+![alt text](https://i.imgur.com/YGXUuvo.png) 
+
 
 **PLANNED FEATURES**
 - Song art support - As it stands now, there is no possible way to achieve this with what's been offered to developers
