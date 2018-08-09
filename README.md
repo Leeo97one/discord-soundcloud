@@ -8,6 +8,7 @@
 - Currently, the app refreshes your status every 10-15 seconds, which means when you switch songs it may not change instantly. This is not a bug, **_this is a feature_**
 
 **KNOWN BUGS**
+- Right now the remaining time will not change if you skip around in a song. We are working on this right now.
 - Not having your SoundCloud language set to English will cause the application to keep your status stuck on "Currently Browsing"
 
 **SETUP FOR DEVS ON WINDOWS -** Clone and navigate to the directory in CMD and run 
