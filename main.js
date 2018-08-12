@@ -32,7 +32,7 @@ let appID = '423329180227338240',
     },
     getInfos = `(function() {
         
-        if(document.querySelector('.playControl').getAttribute('title') == "Pause current") {
+        if(document.querySelector('.playControl').getAttribute('title') == "Mettre en pause le titre en cours") {
             return {
                 songName    : document.querySelector('.playbackSoundBadge__titleLink').getAttribute('title'),
                 author   : document.querySelector('.playbackSoundBadge__lightLink').getAttribute('title'),
@@ -42,7 +42,7 @@ let appID = '423329180227338240',
         }
         else {
             return {
-                songName  : 'Currently browsing',
+                songName  : 'En pause',
             }
         }
 
@@ -79,7 +79,7 @@ async function checkSoundCloud() {
     if (infos) { // if !infos don't change presence then.
         let {songName, author, length, timePassed} = infos;
         
-        if (songName == "Currently browsing") {
+        if (songName == "En pause") {
             startTimestamp = undefined;
             endTimestamp = undefined;
         }
@@ -102,7 +102,7 @@ async function checkSoundCloud() {
         rpc.setActivity({
             details: songName,
             state: author
-            ? `by ${author}` 
+            ? `par ${author}` 
             : author,
             startTimestamp: author
             ? startTimestamp 
