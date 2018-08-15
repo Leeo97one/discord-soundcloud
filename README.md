@@ -20,7 +20,7 @@ then
  
 **PREVIEW**                                            
 ![alt text](https://i.imgur.com/BQSEBIs.png)                                            
-_Feel free to add me if you have any questions_
+_Feel free to add me if you have any questions @ Son#1118_
 
 This app was made with Electron so it will launch as it's own window seperate from the browser 
 ![alt text](https://i.imgur.com/YGXUuvo.png) 
