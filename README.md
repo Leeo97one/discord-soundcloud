@@ -5,10 +5,9 @@
 
 **NOTE -** 
 - This is not an extension, it is a seperate browser for SoundCloud. Check preview below.
-- Currently, the app refreshes your status every 10-15 seconds, which means when you switch songs it may not change instantly. This is not a bug, **_this is a feature_**
+- The app refreshes your status every 10-15 seconds, which means when you switch songs it may not appear to change instantly. This is not a bug.
 
 **KNOWN BUGS**
-- Right now the remaining time will not change if you skip around in a song. We are working on this right now.
 - Not having your SoundCloud language set to English will cause the application to keep your status stuck on "Currently Browsing"
 
 **SETUP FOR DEVS ON WINDOWS -** Clone and navigate to the directory in CMD and run 
@@ -19,8 +18,7 @@ then
 **MAC INSTRUCTIONS -** Currently, there is no executable that is compatible with Mac. Although if you're tech savvy, you can clone the repository and run it using the instructions provided below for devs, just make sure you run Terminal instead of CMD :) 
  
 **PREVIEW**                                            
-![alt text](https://i.imgur.com/BQSEBIs.png)                                            
-_Feel free to add me if you have any questions @ Son#1118_
+![alt text](https://i.imgur.com/h424T5I.png) ![alt text](https://i.imgur.com/1zAgvPG.png)                                        
 
 This app was made with Electron so it will launch as it's own window seperate from the browser 
 ![alt text](https://i.imgur.com/YGXUuvo.png) 
