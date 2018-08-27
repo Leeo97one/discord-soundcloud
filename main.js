@@ -76,9 +76,6 @@ function getSeconds5(str, multiplier) {
 
 var isListening = false;
 
-function addSec(date, seconds) {
-    date.getTime() + seconds*1000;
-}
 
 var multiplier = 1;
 
@@ -108,18 +105,24 @@ async function checkSoundCloud() {
             //console.log(getMinutes(length), " ", getSeconds(length));
             startTimestamp = new Date();
             endTimestamp = addTime(startTimestamp, getMinutes(length), getSeconds(length), getMinutes(timePassed), getSeconds(timePassed));
+            if (getSeconds(length) == 30 || getSeconds(length) == 15 && isListening) {
+                songName = "Advertisment";
+                author = "SoundCloud";
+            }
         }
         else {
             if (isListening) {
                 endTimestamp = addTime(startTimestamp, getMinutes(length), getSeconds5(length, multiplier), getMinutes(timePassed), getSeconds(timePassed));
                 multiplier++;
+                if (getSeconds(length) == 30 || getSeconds(length) == 15 && isListening) {
+                    songName = "Advertisment";
+                    author = "SoundCloud";
+                }
             }
+            
         }
 
-        if (getSeconds(length) == 30 || getSeconds(length) == 15) {
-            songName = "Advertisment";
-            author = "SoundCloud";
-        }
+        
 
         
 
