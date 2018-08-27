@@ -1,5 +1,8 @@
 # Discord Rich-Presence for SoundCloud
 
+**PREVIEW**                                            
+![alt text](https://i.imgur.com/h424T5I.png) ![alt text](https://i.imgur.com/1zAgvPG.png) ![alt text](https://i.imgur.com/Az7mghi.png)
+
 **[STAND-ALONE INSTALLER](https://github.com/riverrrrrr/discord-soundcloud/releases)** *(~42mb)*                                     
 *Just run the installer and it will add a shortcut to your desktop. It will install to AppData/Local/Programs*              
 
@@ -17,9 +20,7 @@ then
  
 **MAC INSTRUCTIONS -** Currently, there is no executable that is compatible with Mac. Although if you're tech savvy, you can clone the repository and run it using the instructions provided below for devs, just make sure you run Terminal instead of CMD :) 
  
-**PREVIEW**                                            
-![alt text](https://i.imgur.com/h424T5I.png) ![alt text](https://i.imgur.com/1zAgvPG.png)                                        
-
+   
 This app was made with Electron so it will launch as it's own window seperate from the browser 
 ![alt text](https://i.imgur.com/YGXUuvo.png) 
 
