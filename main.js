@@ -99,6 +99,7 @@ async function checkSoundCloud() {
             isListening = true;
         }
         
+
         if (tempSong != songName && isListening) {
             startTimestamp = undefined;
             endTimestamp = undefined;
@@ -113,6 +114,11 @@ async function checkSoundCloud() {
                 endTimestamp = addTime(startTimestamp, getMinutes(length), getSeconds5(length, multiplier), getMinutes(timePassed), getSeconds(timePassed));
                 multiplier++;
             }
+        }
+
+        if (getSeconds(length) == 30 || getSeconds(length) == 15) {
+            songName = "Advertisment";
+            author = "SoundCloud";
         }
 
         
