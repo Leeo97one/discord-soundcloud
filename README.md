@@ -3,6 +3,7 @@
 **PREVIEW**                                            
 ![alt text](https://i.imgur.com/h424T5I.png) ![alt text](https://i.imgur.com/1zAgvPG.png) ![alt text](https://i.imgur.com/Az7mghi.png)
 
+**[IF YOU'RE NOT A DEV USE THIS]**                        
 **[STAND-ALONE INSTALLER](https://github.com/riverrrrrr/discord-soundcloud/releases)** *(~140mb)*                                     
 *Just run the installer and it will add a shortcut to your desktop. It will install to AppData/Local/Programs*              
 
