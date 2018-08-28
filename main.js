@@ -6,7 +6,7 @@ const rpc      = new Client({transport: 'ipc'});
 
 widevine.load(app);
 
-let appID = 'APP ID GOES HERE',
+let appID = 'DEV ID HERE',
     mainWindow,
     smallImageKey,
     start, end,
@@ -105,7 +105,7 @@ async function checkSoundCloud() {
             //console.log(getMinutes(length), " ", getSeconds(length));
             startTimestamp = new Date();
             endTimestamp = addTime(startTimestamp, getMinutes(length), getSeconds(length), getMinutes(timePassed), getSeconds(timePassed));
-            if (getSeconds(length) == 30 || getSeconds(length) == 15 && isListening) {
+            if ((getSeconds(length) == 30 || getSeconds(length) == 15) && isListening && getMinutes(length) == 0) {
                 songName = "Advertisment";
                 author = "SoundCloud";
             }
@@ -114,7 +114,7 @@ async function checkSoundCloud() {
             if (isListening) {
                 endTimestamp = addTime(startTimestamp, getMinutes(length), getSeconds5(length, multiplier), getMinutes(timePassed), getSeconds(timePassed));
                 multiplier++;
-                if (getSeconds(length) == 30 || getSeconds(length) == 15 && isListening) {
+                if ((getSeconds(length) == 30 || getSeconds(length) == 15) && isListening && getMinutes(length) == 0) {
                     songName = "Advertisment";
                     author = "SoundCloud";
                 }
