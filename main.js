@@ -28,7 +28,7 @@ let appID = 'DEV ID HERE',
     login = (tries = 0) => {
         if (tries > 10) return mainWindow.webContents.executeJavaScript(connectionNotice);
         tries += 1;
-        rpc.login(appID).catch(e => setTimeout(() => login(tries), 10E3));
+        rpc.login({ clientId: appID }).catch(e => setTimeout(() => login(tries), 10E3));
     },
     getInfos = `(function() {
         
