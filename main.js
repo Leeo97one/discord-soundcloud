@@ -106,7 +106,7 @@ async function checkSoundCloud() {
             startTimestamp = new Date();
             endTimestamp = addTime(startTimestamp, getMinutes(length), getSeconds(length), getMinutes(timePassed), getSeconds(timePassed));
             if ((getSeconds(length) == 30 || getSeconds(length) == 15) && isListening && getMinutes(length) == 0) {
-                songName = "Advertisment";
+                songName = "Publicité";
                 author = "SoundCloud";
             }
         }
@@ -115,7 +115,7 @@ async function checkSoundCloud() {
                 endTimestamp = addTime(startTimestamp, getMinutes(length), getSeconds5(length, multiplier), getMinutes(timePassed), getSeconds(timePassed));
                 multiplier++;
                 if ((getSeconds(length) == 30 || getSeconds(length) == 15) && isListening && getMinutes(length) == 0) {
-                    songName = "Advertisment";
+                    songName = "Publicité";
                     author = "SoundCloud";
                 }
             }
