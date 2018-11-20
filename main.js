@@ -6,7 +6,7 @@ const rpc      = new Client({transport: 'ipc'});
 
 widevine.load(app);
 
-let appID = '423329180227338240',
+let appID = 'DEV ID HERE',
     mainWindow,
     smallImageKey,
     start, end,
@@ -51,11 +51,12 @@ let appID = '423329180227338240',
 var startTimestamp = undefined;
 var endTimestamp = undefined;
 var tempSong = undefined; 
-var tempTimePassed = undefined;
+var changedSongs = false;
 
 function addTime(date, minutes, seconds, minutesPassed, secondsPassed) {
     return new Date(date.getTime() + (minutes*60000 + seconds*1000) - (minutesPassed*60000 + secondsPassed*1000));
 }
+
 
 function addSeconds(date, seconds) {
     return new Date(date.getTime() + seconds*1000);
@@ -69,6 +70,15 @@ function getSeconds(str) {
     return Number(str.split(":")[1]);
 }
 
+function getSeconds5(str, multiplier) {
+    return Number(str.split(":")[1]) + 5 * multiplier;
+}
+
+var isListening = false;
+
+
+var multiplier = 1;
+
 async function checkSoundCloud() {
 
     if (!rpc || !mainWindow) return;
@@ -80,25 +90,48 @@ async function checkSoundCloud() {
         let {songName, author, length, timePassed} = infos;
         
         if (songName == "En pause") {
+            isListening = false;
+        }
+        else {
+            isListening = true;
+        }
+        
+
+        if (tempSong != songName && isListening) {
             startTimestamp = undefined;
             endTimestamp = undefined;
-        }
-
-        
-        
-        if (tempSong != songName) {
             tempSong = songName;
+            multiplier = 1;
             //console.log(getMinutes(length), " ", getSeconds(length));
             startTimestamp = new Date();
-            tempTimePassed = timePassed;
             endTimestamp = addTime(startTimestamp, getMinutes(length), getSeconds(length), getMinutes(timePassed), getSeconds(timePassed));
+            if ((getSeconds(length) == 30 || getSeconds(length) == 15) && isListening && getMinutes(length) == 0) {
+                songName = "Advertisment";
+                author = "SoundCloud";
+            }
+        }
+        else {
+            if (isListening) {
+                endTimestamp = addTime(startTimestamp, getMinutes(length), getSeconds5(length, multiplier), getMinutes(timePassed), getSeconds(timePassed));
+                multiplier++;
+                if ((getSeconds(length) == 30 || getSeconds(length) == 15) && isListening && getMinutes(length) == 0) {
+                    songName = "Advertisment";
+                    author = "SoundCloud";
+                }
+            }
+            
         }
 
-        if (tempTimePassed != timePassed) {
-            tempTimePassed = timePassed;
-            endTimestamp = addTime(startTimestamp, getMinutes(length), getSeconds(length), getMinutes(timePassed), getSeconds(timePassed));
-        }
         
+
+        
+
+
+        //  if (tempTimePassed != timePassed && isListening) {
+        //      tempTimePassed = timePassed;
+        //      endTimestamp = addTime(startTimestamp, getMinutes(length), getSeconds(length) + 6, getMinutes(timePassed), getSeconds(timePassed));
+        //  }
+
         rpc.setActivity({
             details: songName,
             state: author
@@ -110,6 +143,7 @@ async function checkSoundCloud() {
             endTimestamp: author
             ? endTimestamp
             : undefined,
+            smallImageKey: isListening ? 'pause' : 'play',
             largeImageKey:'soundcloud',
             largeImageText: songName,
             instance: false,
