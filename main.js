@@ -6,7 +6,7 @@ const rpc      = new Client({transport: 'ipc'});
 
 widevine.load(app);
 
-let appID = 'DEV ID HERE',
+let appID = '482114859056496660',
     mainWindow,
     smallImageKey,
     start, end,
